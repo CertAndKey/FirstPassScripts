@@ -1,4 +1,7 @@
 #!/bin/bash
+#Scans all ports for SSH and Telnet
+#Prints PASS or FAIL depending on if SSH or Telnet are running
+#If FAIL, the SSH and Telnet logs are printed to the screen
 
 On_Red='\033[41m'
 On_Green='\033[42m'
@@ -30,8 +33,6 @@ then
 else
   echo "please install nmap on this machine and try again"
 fi
-
-
 
 nmap -p- -sV $1 >> tmp.txt
 if grep -iq 'ssh\|telnet' tmp.txt; then

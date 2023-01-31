@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 
+#run this script by using the following format
+#"python3 AuthenticationCheckOnAPICalls.py <api_file> <camera_IP> <camera_HTTP_port>"
+#
+#for the API file.....
+#please enter API values with leading slashes included
+#each API should be on its own line
+#example....
+#/api/GetMac
+#/api/GetStats
+#/api/GetTime
+
 import requests
 import sys
 from requests.packages.urllib3.exceptions import InsecureRequestWarning

@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+#user command line inputs shoud be: API file, camera IP, camera HTTP port, camera root username, camera root password, fuzz file
+#
+#API file should list APIs with inputs labled as {INPUT}
+#fuzz file should contain list of malicious strings, BLNS is a good one to use
+#
 
 import requests
 import sys
